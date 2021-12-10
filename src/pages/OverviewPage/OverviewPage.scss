@@ -1,0 +1,172 @@
+@import "../../assets/styles/core";
+
+.overview{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    background-color:rgba(204, 153, 116, 0.2);
+    position: relative;
+
+    
+    @include responsive(tab-port){
+        display: flex;
+        flex-direction: column;
+    }
+    @include responsive(phone){
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .overview__left{        
+        flex-basis: 50%;        
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+
+        
+        @include responsive(tab-port){
+            flex-basis: unset;
+            order: 3;
+        }
+        @include responsive(phone){            
+            flex-basis: unset;
+            padding: 0px 20px 0px 20px;
+            order: 3;
+        }
+
+        
+        .overveiw__topbar{
+            position: absolute;
+            top: 0;
+            width: 50%;  
+            height: 70px;    
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include responsive(tab-port){                
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+
+            @include responsive(phone){                
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            
+        }
+
+        .overview__desc{
+            top: 70px;
+            position: relative;
+            .overview__descTitle{
+                font-size: 38px;
+                margin-bottom: 10px;
+                margin-top: 30px;
+                font-weight: 600;
+
+                
+            @include responsive(phone){
+                font-size: 28px;
+            }
+
+            }
+            .overview__descSubtitle{
+                font-size: 18px;
+                font-weight: 400;
+                color: #333333;
+                margin-bottom: 20px;
+
+                    
+                @include responsive(phone){
+                    font-size: 16px;
+                }
+            }
+
+            .overview__list{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                .overview__checkIcon{
+                    margin-right: 10px;
+                }
+                .overview__checkIconText{
+                    font-size: 16px;
+                    font-weight: 400;
+                        
+                    @include responsive(phone){
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .overview__btn{                
+                position: relative;
+                border: none;
+                padding: 20px 10px 20px 15px;
+                width: fit-content;
+                border-radius: 10px;
+                background-color: black;
+                color: white;
+                font-size: 18px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                    
+                @include responsive(phone){
+                    border: none;
+                    padding: 15px 10px 15px 15px;
+                    width: fit-content;
+                    border-radius: 10px;
+                    background-color: black;
+                    color: white;
+                    font-size: 16px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .overview__partner{
+                margin-top: 20px;
+
+                .overview_PartnerImg{
+                    @include responsive(phone){
+                        width: 100px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .overview__Right{
+        flex-basis: 50%;
+        height: 100vh;
+        // width: 100%;
+        // height: 100%;
+        background-image: url("../../assets/images/HeroImage.jpg");
+        background-size: cover;
+
+        @include responsive(tab-port){
+            order: 2;       
+            flex-basis: unset; 
+            height: 400px;    
+            background-image: url("../../assets/images/HeroImageMobile.jpg");
+            background-size: cover;            
+            top: 70px;
+            position: relative;
+        }
+        @include responsive(phone){
+            order: 2;
+            flex-basis: unset;              
+            height: 300px; 
+            background-image: url("../../assets/images/HeroImageMobile.jpg");
+            background-size: cover;            
+            top: 70px;
+            position: relative;
+        }
+    }
+}

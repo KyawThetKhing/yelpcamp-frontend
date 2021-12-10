@@ -1,0 +1,24 @@
+.formControl {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 10px 0;
+
+  .formControl__label {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Urbanist;
+  }
+
+  input {
+    border: none;
+    padding: 20px 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

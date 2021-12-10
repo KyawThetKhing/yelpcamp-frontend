@@ -1,0 +1,60 @@
+// @import '../../assets/styles/core';
+
+@import "../../assets/styles/core";
+
+.topbar{
+    width: 100%;
+    height: 70px;
+    // position: fixed;
+    // top: 0;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    @include responsive(phone){      
+        justify-content: space-between;
+        
+    }
+    .topbar__left{
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        .topbar__logo{
+            margin-right: 20px;
+        }
+        .topbar__home{
+
+        }
+    }
+
+    .topbar__back{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+        opacity: 0.5;
+
+        .topbar__backIcon{
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .topbar__backText{
+            @include responsive(phone){      
+                display: none;                
+            }
+        }
+    }
+
+    .topbar__right{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .topbar__userName{
+            margin-right: 10px;
+        }
+    }
+}

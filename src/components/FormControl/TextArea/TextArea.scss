@@ -1,0 +1,23 @@
+.formControl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .formControl__label {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Urbanist;
+  }
+
+  textarea {
+    border: none;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

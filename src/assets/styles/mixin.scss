@@ -1,0 +1,42 @@
+
+// $mobile: 375px;
+
+// $tablet: 768px;
+
+// $desktop: 1024px;
+
+
+// @mixin mobile {
+//     @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+//       @content;
+//     }
+//   }
+
+// @mixin tablet {
+// @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+//     @content;
+// }
+// }
+
+// @mixin desktop {
+// @media (min-width: #{$desktop}) {
+//     @content;
+// }
+// }
+
+
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 600px) {@content};
+    }
+    @if $breakpoint == tab-port {
+      @media only screen and (max-width: 900px) {@content};
+    } 
+    @if $breakpoint == tab-land {
+      @media only screen and (max-width: 1400px) {@content};
+    } 
+    @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 1800px) {@content};
+    } 
+}

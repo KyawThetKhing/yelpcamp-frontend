@@ -1,0 +1,46 @@
+.campDetail {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  padding: 40px;
+  border-radius: 5px;
+  width: 100%;
+  height: 60%;
+
+  .campDetail__img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 5px;
+    z-index: -1;
+  }
+
+  .campDetail__priceWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .campDetail__name {
+      font-size: 22px;
+      font-weight: 600;
+      font-family: Urbanist;
+    }
+    .campDetail__price {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: Urbanist;
+    }
+  }
+
+  .campDetail__desc {
+    font-size: 16px;
+    font-family: Urbanist;
+  }
+
+  .campDetail__owner {
+    font-size: 16px;
+    font-family: Urbanist;
+    font-style: italic;
+    margin-top: 20px;
+  }
+}

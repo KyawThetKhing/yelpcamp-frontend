@@ -1,0 +1,54 @@
+@import "assets/styles/core";
+
+.campDetailPage {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  .campDetailPage__wrapper {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+    @include responsive(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include responsive(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campDetailPage__left {
+      flex-basis: 40%;
+      margin-right: 20px;
+      @include responsive(tab-port) {
+        order: 2;
+        width: 100%;
+        margin-top: 20px;
+      }
+      @include responsive(phone) {
+        width: 100%;
+        order: 2;
+        margin-top: 20px;
+      }
+    }
+    .campDetailPage__right {
+      flex-basis: 60%;
+      @include responsive(tab-port) {
+        order: 1;
+        width: 100%;
+      }
+      @include responsive(phone) {
+        width: 100%;
+        order: 1;
+      }
+    }
+  }
+}
